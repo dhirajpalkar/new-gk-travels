@@ -1,0 +1,511 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK Travels - Premium Car Rental & Travel Services</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>GK Travels</h2>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#cars" class="nav-link">Our Cars</a></li>
+                <li><a href="#packages" class="nav-link">Packages</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="book-now-btn" onclick="openBookingModal()">Book Now</button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Experience Premium Travel</h1>
+            <p class="hero-subtitle">Professional car rental services for all your travel needs</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="openBookingModal()">Book Your Ride</button>
+                <button class="btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">Our Services</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Quick Booking Form -->
+    <section class="quick-booking">
+        <div class="container">
+            <form class="booking-form-inline" id="quickBookingForm">
+                <div class="form-group-inline">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group-inline">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group-inline">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <select required>
+                        <option value="">Select Destination</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Coimbatore">Coimbatore</option>
+                    </select>
+                </div>
+                <div class="form-group-inline">
+                    <i class="fas fa-calendar"></i>
+                    <input type="text" id="quickDate" placeholder="Select Date" required>
+                </div>
+                <button type="submit" class="btn-submit">Get Quote</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-label">About Us</span>
+                    <h2 class="section-title">Welcome to GK Travels</h2>
+                    <p class="about-text">
+                        GK Travels was founded with a vision to provide great travel services to corporate, business house and local transport. We strive to build a great network of human logistics bypassing every different hurdle at every footstep.
+                    </p>
+                    <p class="about-text">
+                        Dedicated to car rentals service, we wish to be a leader in all types of car rentals and travel support with quick and quality service at affordable prices.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Trust & Safety</h4>
+                                <p>Verified drivers and vehicles</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>24/7 Service</h4>
+                                <p>Always available for you</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <h4>Quality Service</h4>
+                                <p>Premium experience guaranteed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1709715357528-1d3d78ed6cfc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBzZXJ2aWNlfGVufDB8fHx8MTc2NDQzNjIzNHww&ixlib=rb-4.1.0&q=85" alt="Professional Service">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Services</span>
+                <h2 class="section-title">Premium Travel Solutions</h2>
+                <p class="section-subtitle">Comprehensive car rental and transportation services tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Corporate Car Rental</h3>
+                    <p>Professional transportation solutions for businesses and corporate clients with dedicated support.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Airport Transfer</h3>
+                    <p>Reliable airport pickup and drop services ensuring timely arrival for your flights.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Employee Transportation</h3>
+                    <p>Efficient and safe employee transportation services for organizations of all sizes.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Car Rental</h3>
+                    <p>Wide range of vehicles available for hourly, daily, or monthly rental at competitive rates.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Fleet Management</h3>
+                    <p>Complete fleet management solutions with maintenance, tracking, and optimization services.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Outstation Travel</h3>
+                    <p>Comfortable long-distance travel services to your favorite destinations across India.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cars Section -->
+    <section class="cars" id="cars">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Fleet</span>
+                <h2 class="section-title">Choose Your Perfect Ride</h2>
+                <p class="section-subtitle">Premium vehicles for every journey</p>
+            </div>
+            <div class="cars-grid">
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg" alt="Hatchback">
+                        <div class="car-badge">Popular</div>
+                    </div>
+                    <div class="car-content">
+                        <h3>Hatchback</h3>
+                        <p>Perfect for city rides and short trips</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 4 Seats</span>
+                            <span><i class="fas fa-suitcase"></i> 2 Bags</span>
+                            <span><i class="fas fa-snowflake"></i> AC</span>
+                        </div>
+                        <button class="btn-car" onclick="openBookingModal()">Book Now</button>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1618418721668-0d1f72aa4bab?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBjYXJzfGVufDB8fHx8MTc2NDQzNjIyMnww&ixlib=rb-4.1.0&q=85" alt="Sedan">
+                        <div class="car-badge">Recommended</div>
+                    </div>
+                    <div class="car-content">
+                        <h3>Sedan</h3>
+                        <p>Comfortable and spacious for long drives</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 5 Seats</span>
+                            <span><i class="fas fa-suitcase"></i> 3 Bags</span>
+                            <span><i class="fas fa-snowflake"></i> AC</span>
+                        </div>
+                        <button class="btn-car" onclick="openBookingModal()">Book Now</button>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBjYXJzfGVufDB8fHx8MTc2NDQzNjIyMnww&ixlib=rb-4.1.0&q=85" alt="SUV">
+                    </div>
+                    <div class="car-content">
+                        <h3>SUV</h3>
+                        <p>Spacious and powerful for family trips</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 7 Seats</span>
+                            <span><i class="fas fa-suitcase"></i> 5 Bags</span>
+                            <span><i class="fas fa-snowflake"></i> AC</span>
+                        </div>
+                        <button class="btn-car" onclick="openBookingModal()">Book Now</button>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1519245659620-e859806a8d3b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBjYXJzfGVufDB8fHx8MTc2NDQzNjIyMnww&ixlib=rb-4.1.0&q=85" alt="Luxury Car">
+                        <div class="car-badge">Premium</div>
+                    </div>
+                    <div class="car-content">
+                        <h3>Luxury Cabs</h3>
+                        <p>Ultimate comfort and style for special occasions</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 5 Seats</span>
+                            <span><i class="fas fa-suitcase"></i> 4 Bags</span>
+                            <span><i class="fas fa-gem"></i> Premium</span>
+                        </div>
+                        <button class="btn-car" onclick="openBookingModal()">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="packages" id="packages">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Popular Packages</span>
+                <h2 class="section-title">Best Value Travel Packages</h2>
+                <p class="section-subtitle">Pre-designed packages for your convenience</p>
+            </div>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1542296332-2e4473faf563?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxhaXJwb3J0fGVufDB8fHx8MTc2NDQzNjIyOHww&ixlib=rb-4.1.0&q=85" alt="Airport Pickup">
+                    </div>
+                    <div class="package-content">
+                        <h3>Local Airport Pickup & Drop</h3>
+                        <p>Reliable airport transfer service with professional drivers</p>
+                        <div class="package-price">Starting from <span>₹999</span></div>
+                        <button class="btn-package" onclick="openBookingModal()">Book Now</button>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1558204692-5f402fe220b9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHw0fHxhaXJwb3J0fGVufDB8fHx8MTc2NDQzNjIyOHww&ixlib=rb-4.1.0&q=85" alt="4hrs 40km">
+                        <div class="package-badge">Best Seller</div>
+                    </div>
+                    <div class="package-content">
+                        <h3>4 HRS 40 KM (Local)</h3>
+                        <p>Perfect for local city tours and shopping</p>
+                        <div class="package-price">Starting from <span>₹1,499</span></div>
+                        <button class="btn-package" onclick="openBookingModal()">Book Now</button>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjB0cmF2ZWx8ZW58MHx8fHwxNzY0NDM2MjE2fDA&ixlib=rb-4.1.0&q=85" alt="Mumbai Transfer">
+                    </div>
+                    <div class="package-content">
+                        <h3>Mumbai Pickup & Drop</h3>
+                        <p>Comfortable intercity travel to Mumbai</p>
+                        <div class="package-price">Starting from <span>₹3,999</span></div>
+                        <button class="btn-package" onclick="openBookingModal()">Book Now</button>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.pexels.com/photos/1179156/pexels-photo-1179156.jpeg" alt="Outstation">
+                    </div>
+                    <div class="package-content">
+                        <h3>Outstation Cab Services</h3>
+                        <p>Long-distance travel with experienced drivers</p>
+                        <div class="package-price">Starting from <span>₹12/km</span></div>
+                        <button class="btn-package" onclick="openBookingModal()">Book Now</button>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1661954864180-e61dea14208a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjB0cmF2ZWx8ZW58MHx8fHwxNzY0NDM2MjE2fDA&ixlib=rb-4.1.0&q=85" alt="8hrs 80km">
+                    </div>
+                    <div class="package-content">
+                        <h3>8 HRS 80 KM (Local)</h3>
+                        <p>Full day car rental for your convenience</p>
+                        <div class="package-price">Starting from <span>₹2,499</span></div>
+                        <button class="btn-package" onclick="openBookingModal()">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">We're here to help you with your travel needs</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Visit Us</h4>
+                        <p>GK Travels & Services, Shop no 3, Wonder City, Wing P, Katraj, Pune, Maharashtra 411046</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h4>Call Us</h4>
+                        <p>
+                            <a href="tel:9890092116">9890092116</a><br>
+                            <a href="tel:9607898444">9607898444</a><br>
+                            <a href="tel:8275767783">8275767783</a>
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email Us</h4>
+                        <p>
+                            <a href="mailto:booking@travels.in">booking@travels.in</a><br>
+                            <a href="mailto:sales@gktravels.in">sales@gktravels.in</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="tel" placeholder="Phone Number" required>
+                            </div>
+                            <div class="form-group">
+                                <select required>
+                                    <option value="">Select Service</option>
+                                    <option value="corporate">Corporate Car Rental</option>
+                                    <option value="airport">Airport Transfer</option>
+                                    <option value="employee">Employee Transportation</option>
+                                    <option value="rental">Car Rental</option>
+                                    <option value="fleet">Fleet Management</option>
+                                    <option value="outstation">Outstation Travel</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit-contact">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>GK Travels</h3>
+                    <p>Founded with a vision to provide great travel services to corporate, business house and local transport.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#cars">Our Cars</a></li>
+                        <li><a href="#packages">Packages</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Corporate Car Rental</a></li>
+                        <li><a href="#">Airport Transfer</a></li>
+                        <li><a href="#">Employee Transportation</a></li>
+                        <li><a href="#">Car Rental</a></li>
+                        <li><a href="#">Fleet Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-phone"></i> 9890092116</li>
+                        <li><i class="fas fa-envelope"></i> sales@gktravels.in</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Katraj, Pune - 411046</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GK Travels. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeBookingModal()">&times;</span>
+            <h2>Book Your Ride</h2>
+            <form class="modal-form" id="bookingModalForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label>Travel Location</label>
+                    <select required>
+                        <option value="">Select destination</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Coimbatore">Coimbatore</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Journey Start Date</label>
+                        <input type="text" id="startDate" placeholder="Select date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Journey Return Date</label>
+                        <input type="text" id="returnDate" placeholder="Select date">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Number of Travellers</label>
+                    <select required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5+">5 or more</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit-modal">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="/gk-travels.js"></script>
+</body>
+</html>
